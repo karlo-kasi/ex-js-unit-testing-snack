@@ -9,7 +9,14 @@ const createSlug = (string) => {
     return string.toLowerCase()
 }
 
+const average = (array) => {
+    const somma = array.reduce((acc, num) => acc + num, 0)
+    const media = somma / array.length
+    return media
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average
 }
