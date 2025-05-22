@@ -33,9 +33,18 @@ const isPalindrome = (string) => {
     return parolaInversa === string.toLowerCase()
 }
 
+const findPostById = (users, id) => {
+    if (id !== parseInt(id)) {
+        throw new Error("Inserisci un ID valido")
+    }
+    return users.find((user) => user.id === id)
+
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    isPalindrome
+    isPalindrome,
+    findPostById
 }
