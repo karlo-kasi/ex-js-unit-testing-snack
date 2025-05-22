@@ -10,7 +10,7 @@ test("La funzione getInitials restituisce le iniziali di un nome completo.", () 
 
 test("La funzione createSlug restituisce una stringa in lowercase.", () => {
     expect(createSlug("ROMANZO")).toBe("romanzo")
-    expect(createSlug("CIAO AMICO MIO COSA FAI")).toBe("ciao amico mio cosa fai")
+    expect(createSlug("CIAO AMICO MIO COSA FAI")).toBe("ciao-amico-mio-cosa-fai")
 })
 
 
@@ -19,4 +19,8 @@ test("La funzione average calcola la media aritmetica di un array di numeri.", (
     expect(average([1, 4, 6, 3, 7])).toBe(4.2)
     expect(average([1, 4])).toBe(2.5)
     expect(() => average([1, "ciao"])).toThrow()
+})
+
+test("La funzione createSlug sostituisce gli spazi con -.", () => {
+    expect(createSlug("Questo è un test")).toBe("questo-è-un-test")
 })

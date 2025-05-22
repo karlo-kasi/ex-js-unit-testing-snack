@@ -6,8 +6,9 @@ const getInitials = (string) => {
 }
 
 const createSlug = (string) => {
-    return string.toLowerCase()
+    return string.toLowerCase().split(" ").join("-")
 }
+
 
 const average = (array) => {
 
