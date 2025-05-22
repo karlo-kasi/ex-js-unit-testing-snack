@@ -6,7 +6,12 @@ const getInitials = (string) => {
 }
 
 const createSlug = (string) => {
-    return string.toLowerCase().split(" ").join("-")
+    if (!string) {
+        throw new Error("Titolo non valido")
+    } else {
+        return string.toLowerCase().split(" ").join("-")
+    }
+
 }
 
 
