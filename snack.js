@@ -10,6 +10,12 @@ const createSlug = (string) => {
 }
 
 const average = (array) => {
+
+    array.forEach((numero) => {
+        if (isNaN(numero)) {
+            throw new Error("Average vuole solo numeri");
+        }
+    })
     const somma = array.reduce((acc, num) => acc + num, 0)
     const media = somma / array.length
     return media
