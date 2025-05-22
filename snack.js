@@ -22,8 +22,15 @@ const average = (array) => {
     return media
 }
 
+const isPalindrome = (string) => {
+
+    const parolaInversa = string.toLowerCase().split("").reverse().join("")
+    return parolaInversa === string.toLowerCase()
+}
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 }
