@@ -5,6 +5,11 @@ const getInitials = (string) => {
     return nameComplete
 }
 
+const createSlug = (string) => {
+    return string.toLowerCase()
+}
+
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
